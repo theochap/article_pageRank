@@ -1,0 +1,87 @@
+%% Based on a TeXnicCenter-Template by Gyorgy SZEIDL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------
+%
+\documentclass[titlepage,leqno]{slides}%
+%
+%----------------------------------------------------------
+% This is a sample document for the LaTeX Slides Class
+% Class options
+%       --  Body text point size (normalsize) is 27 (default)
+%           and can not be adjusted to any other value.
+%       --  Paper size:  letterpaper (8.5x11 inch, default)
+%                        a4paper, a5paper, b5paper,
+%                        legalpaper, executivepaper
+%       --  Orientation (portrait is the default):
+%                        landscape
+%       --  Quality:     final(default), draft
+%       --  Title page:  titlepage, notitlepage
+%       --  Columns:     onecolumn (default), [twocolumn is not avalible]
+%       --  Equation numbering (equation numbers on the right is the default)
+%                        leqno (equation numbers on the left)
+%       --  Displayed equations (centered is the default)
+%                    fleqn (flush left)
+%
+%  \documentclass[a4paper,fleqn]{slides}
+%
+%  The slides are separated from each other by the slide
+%  environment, see below:
+%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%------------------------------------------------------------------
+\hfuzz5pt % Don't bother to report overfull boxes < 5pt
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\pagestyle{plain}
+%%% --------------------------------------------------------------
+\begin{document}
+\title{Quantum Methods applied on google Page Rank}
+\author{Théodore Chapuis-Chkaiban}
+\date{10/02/2020}
+\maketitle
+% ----------------------------------------------------------------
+\begin{slide}{1}
+Page Rank : attribuer à chaque page un score de visibilité. \\
+Le score dépend du nombre de pages auquel une page est liée (ie le degré de la page dans le graphe du web)\\
+Plus précisément, soit I l'importance d'une page Web :
+\begin{itemize}
+	\item L'importance d'une page Web dépend de la somme des importances de ses voisins
+	\item Plus le degré d'un noeud voisin est élevé, plus sa contribution est faible (éviter effets d'échelle)
+\end{itemize}
+
+\begin{equation*}
+I(P_{i}) := \sum{j \in B_{i}} \frac{I(P_{j})}{outdeg{P_{j}}}
+\end{equation*}
+
+\end{slide}
+
+\begin{slide}{2}
+Google Page Rank : plus de 50 Milliards de pages Web \\
+$\rightarrow$ utiliser un algorithme quantique pour optimiser le temps de calcul ! \\
+
+
+\end{slide}
+% ----------------------------------------------------------------
+\begin{slide}{2}
+This is the second slide.
+
+The numbered equation
+\begin{equation}
+u_{tt}-\Delta u+u^{5}+u\left|  u\right|  ^{p-2}=0\text{ in }\mathbf{R}%
+^{3}\times\left[  0,\infty\right[  .\label{eqn1}%
+\end{equation}
+is automatically numbered as equation \ref{eqn1}.
+
+\end{slide}
+% ----------------------------------------------------------------
+
+\end{document}
