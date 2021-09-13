@@ -1,0 +1,15 @@
+Let us introduce another formulation of Almost Directed Stochastic Matrices one will which may is adapted to unweighted input matrices - which is the case in several PageRank applications \cite{gleich_2015}. First, let us introduce the following definition.
+
+\begin{definition}[Almost Directed Stochastic Matrices, unweighted formulation]\label{def:ADSM2}
+Let P be a left stochastic matrix. We define : 
+\begin{equation}
+    \hat{\mathcal{P}} = (1-\alpha) P + \alpha (D^e_{in})^{-1} \times A^{eT}
+\end{equation}
+
+Where $\alpha$ is a constant, $D^e_{in}^{-1}$ and $A^{eT}$ are respectively the in-degree matrix and the unweighted adjacency matrix of $\mathcal{G}^e$, the loop completing graph extension of $\mathcal{G}$.
+For unweighted graphs $\hat{\mathcal{P}} = \mathcal{P}$.
+
+\end{definition}
+
+
+This second matrix form is rather interesting since it allows fast computation: if the graph $\Tilde{G}$ is represented using an hash table, one can access the values of $\Tilde{D}_{in}$ and $\Tilde{A}^T$ in $\mathcal{O}(1)$.

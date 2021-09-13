@@ -1,0 +1,27 @@
+
+\subsection{Theoretical proofs of convergence speed}
+\subsubsection{Markov-Chain Mixing-Time and Convergence speed}
+\label{section:theoretical_proofs_of_convergence}
+\begin{definition}[Markov-Chain Mixing-Time \cite{levin_peres_wilmer_propp_wilson_2017}, section 4.5]
+Let P be the transition matrix of a given regular Markov chain C, whose associated graph is G=(V,E). Then, $(P^t(x, .))_{t\in \mathbb{N}}$, with $x \in V$ converges to the probability limit distribution $\pi$ (see theorem \ref{theo:limit_distrib_markov_chain}).
+
+One defines the distance to the probability limit distribution by :
+\begin{equation}
+    d(t) := \underset{x \in V}{max} \ \underset{y \in V}{max} \ \| P^t(x, y) - \pi(y) \|
+\end{equation}
+
+Then, the mixing time of the Markov Chain C is defined as : 
+\begin{equation}
+    t_{mix}(\epsilon) := min\{t : d(t) \leq \epsilon \}
+\end{equation}
+
+\end{definition}
+
+Intuitively, the mixing-time of C is the minimal number of steps a random walker starting from any node needs to perform to so that its presence probability distribution becomes $\epsilon$-close to the limit probability distribution $\pi$.
+
+We will now state a fundamental theorem to link the speed of convergence of random walkers propagating on Markov-Chains to the underlying graph structure.
+
+\begin{theo}[Markov-Chain Mixing-Time spectral-gap and Cheeger's constant bounds \cite{levin_peres_wilmer_propp_wilson_2017}]
+Let G be a strongly connected graph and let $\mathcal{L}$ be the Laplacian of G,
+
+\end{theo}
